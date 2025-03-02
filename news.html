@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UM6P - Africa Initiative | News</title>
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">UM6P - Africa Initiative</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="workstreams.html">Workstreams</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle">About <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html">Our Story</a></li>
+                        <li><a href="impacts.html">Our Impact</a></li>
+                    </ul>
+                </li>
+                <li><a href="news.html" class="active">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="menu-toggle"><i class="fas fa-bars"></i></div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero blog-hero">
+            <h1>Blog & News</h1>
+            <p>Stay Updated on Our Latest Initiatives and Achievements</p>
+        </section>
+
+        <!-- Blog/News Section -->
+        <section class="blog-content">
+            <h2>Recent Updates</h2>
+            <!-- Search and Filter -->
+            <div class="blog-filter">
+                <div class="form-group">
+                    <label for="search-posts">Search Articles</label>
+                    <input type="text" id="search-posts" placeholder="Search by keyword..." oninput="filterPosts()">
+                </div>
+                <div class="form-group">
+                    <label for="filter-tags">Filter by Tag</label>
+                    <select id="filter-tags" onchange="filterPosts()">
+                        <option value="">All Tags</option>
+                        <option value="Agriculture">Agriculture</option>
+                        <option value="Community">Community</option>
+                        <option value="Education">Education</option>
+                        <option value="Environment">Environment</option>
+                        <option value="Energy">Energy</option>
+                        <option value="Entrepreneurship">Entrepreneurship</option>
+                        <option value="Health">Health</option>
+                        <option value="Research">Research</option>
+                        </select>
+                </div>
+            </div>
+            <div class="blog-grid" id="blog-grid">
+                <!-- Blog posts will be dynamically inserted here -->
+            </div>
+            <div class="blog-pagination" id="blog-pagination">
+                <button class="btn pagination-btn" onclick="changePage('prev')">Previous</button>
+                <div class="pagination-numbers" id="pagination-numbers"></div>
+                <button class="btn pagination-btn" onclick="changePage('next')">Next</button>
+            </div>
+        </section>
+
+        <!-- Archive Section -->
+        <!-- <section class="blog-archive">
+            <h2>Article Archive</h2>
+            <div class="archive-grid" id="archive-grid"> -->
+                <!-- Archive will be dynamically inserted here -->
+            <!-- </div>
+        </section> -->
+        
+        <!-- Newsletter Subscription Form -->
+        <section class="newsletter-subscription">
+            <h2>Subscribe to Our Newsletter</h2>
+            <p>Stay informed with our weekly updates on initiatives, achievements, and more.</p>
+            <form class="subscription-form" id="subscriptionForm">
+                <div class="form-group">
+                    <label for="subscription-email">Email Address</label>
+                    <input type="email" id="subscription-email" name="email" placeholder="Your Email" required>
+                </div>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </section>
+
+
+        <!-- Previous Newsletters Section -->
+        <section class="newsletters-content">
+            <h2>Previous Newsletters</h2>
+            <div class="newsletter-grid">
+                <!-- February 2025 -->
+                <details class="newsletter-month">
+                    <summary>February 2025</summary>
+                    <div class="newsletter-month-content">
+                        <div class="newsletter-item">
+                            <i class="fas fa-newspaper"></i>
+                            <p><a href="https://um6p-my.sharepoint.com/:b:/g/personal/africa_initiative_um6p_ma/EYE4XPO1ijNNs0gnDl2odKgBIVFKSybUjnxPEh7uFC2f2g?e=sQ3bPp" target="_blank">February 28, 2025. <strong>Tags:</strong> Genetics, Food security, Health, Entrepreneurship, Energy, etc</a>.</p>
+                        </div>
+                        <div class="newsletter-item">
+                            <i class="fas fa-newspaper"></i>
+                            <p><a href="#">February 21, 2025. <strong>Tags:</strong> Energy, Health</a>.</p>
+                        </div>
+                        <div class="newsletter-item">
+                            <i class="fas fa-newspaper"></i>
+                            <p><a href="#">February 14, 2025. <strong>Tags:</strong> Energy, Health</a>.</p>
+                        </div>
+                        <div class="newsletter-item">
+                            <i class="fas fa-newspaper"></i>
+                            <p><a href="#">February 7, 2025. <strong>Tags:</strong> Energy, Health</a>.</p>
+                        </div>
+                    </div>
+                </details>
+
+                <!-- January 2025 -->
+                <details class="newsletter-month">
+                    <summary>January 2025</summary>
+                    <div class="newsletter-month-content">
+                        <div class="newsletter-item">
+                            <i class="fas fa-newspaper"></i>
+                            <p><a href="#">January 31, 2025. <strong>Tags:</strong> Energy, Health</a>.</p>
+                        </div>
+                        <div class="newsletter-item">
+                            <i class="fas fa-newspaper"></i>
+                            <p><a href="#">January 24, 2025. <strong>Tags:</strong> Energy, Health</a>.</p>
+                        </div>
+                        <div class="newsletter-item alt-bg">
+                            <i class="fas fa-newspaper"></i>
+                            <p><a href="#">January 17, 2025. <strong>Tags:</strong> Energy, Health</a>.</p>
+                        </div>
+                        <div class="newsletter-item">
+                            <i class="fas fa-newspaper"></i>
+                            <p><a href="#">January 10, 2025. <strong>Tags:</strong> Energy, Health</a>.</p>
+                        </div>
+                        <div class="newsletter-item alt-bg">
+                            <i class="fas fa-newspaper"></i>
+                            <p><a href="#">January 3, 2025. <strong>Tags:</strong> Energy, Health</a>.</p>
+                        </div>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+
+        <!-- Call to Action -->
+        <section class="cta">
+            <h2>Stay Updated</h2>
+            <p>Follow our progress and get involved in shaping Africa’s future.</p>
+            <a href="contact.html" class="btn">Connect with Us</a>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>UM6P - Africa Initiative</h3>
+                <p>Located at <a href="https://www.um6p.ma/en" target="_blank">Mohammed VI Polytechnic University</a><br>Benguerir, Morocco</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <p>Email: <a href="mailto:africa.initiative@um6p.ma">africa.initiative@um6p.ma</a><br>Phone: +212 668 033 713</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="https://twitter.com/um6p_official" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.linkedin.com/school/um6p/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/UM6P.official" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/um6p_official/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="footer-bottom">© 2025 UM6P - Africa Initiative. All rights reserved.</p>
+    </footer>
+
+    <script>
+    // Blog posts data
+    const blogPosts = [
+        {
+        "image": "images/Healthcare.jpg",
+        "date": "March 1, 2025",
+        "author": "Azeez Hamzat",
+        "authorLink": "https://www.linkedin.com/in/azeezhamzat",
+        "title": "Advancing Healthcare in Africa: UM6P’s Vision for AI-Driven Innovation",
+        "excerpt": "Learn how UM6P leverages AI to transform healthcare in Africa, addressing challenges and improving access during Science Week.",
+        "link": "Advancing-healthcare.html",
+        "tags": ["Health", "AI", "Innovation", "Africa"],
+        "year": 2025,
+        "month": "March"
+        },
+
+        {
+        "image": "images/Energy-Research.jpg",
+        "date": "February 27, 2025",
+        "author": "Azeez Hamzat",
+        "authorLink": "https://www.linkedin.com/in/Azeezhamzat",
+        "title": "Why Africa Must Do More on Energy Research",
+        "excerpt": "Learn why Africa must prioritize energy research to address access gaps and climate challenges, with insights on the €30M EU-AU fund boosting sustainable solutions.",
+        "link": "africa-energy-research.html",
+        "tags": ["Energy", "Research", "Sustainability", "Climate Change"],
+        "year": 2025,
+        "month": "February"
+        },
+
+        {
+        "image": "images/NextAfrica.jpeg",
+        "date": "February 28, 2025",
+        "author": "Azeez Hamzat",
+        "authorLink": "https://www.linkedin.com/in/azeezhamzat",
+        "title": "NextAfrica: Bridging Europe and Africa Through Innovation at Station F",
+        "excerpt": "Learn how UM6P’s NextAfrica program at Station F accelerates Greentech, Agritech, and Healthtech startups, connecting Europe and Africa for sustainable innovation.",
+        "link": "next-africa.html",
+        "tags": ["Innovation", "Enrepreneurship", "Environment", "Agriculture", "Health"],
+        "year": 2025,
+        "month": "February"
+        },
+            {
+            image: "images/Startgate.jpg",
+            date: "December 15, 2024",
+            author: "Azeez Hamzat",
+            authorLink: "https://www.linkedin.com/in/azeezhamzat",
+            title: "Unleashing Africa’s Entrepreneurial Spirit: How UM6P is Shaping the Future Through Innovation",
+            excerpt: "Discover how UM6P is empowering Africa’s youth to tackle challenges through entrepreneurship and innovation.",
+            link: "Unleashing-Entrepreneurship.html",
+            tags: ["Entrepreneurship", "Innovation", "Startups"],
+            year: 2024,
+            month: "December"
+            },
+
+            {
+            image: "images/diversity-um6p.jpg",
+            date: "January 7, 2025",
+            author: "Azeez Hamzat",
+            authorLink: "https://www.linkedin.com/in/azeezhamzat",
+            title: "Embracing Diversity: How UM6P is Building a Pan-African Community of Innovators",
+            excerpt: "Discover how UM6P fosters a diverse, multicultural student body to drive innovation and collaboration across Africa.",
+            link: "blog-post-diversity.html",
+            tags: ["Diversity", "Education", "Community"],
+            year: 2025,
+            month: "January"
+            },
+            
+            {
+            "image": "images/For Africa.png",
+            "date": "January 10, 2025",
+            "author": "Azeez Hamzat",
+            "authorLink": "https://www.linkedin.com/in/azeezhamzat",
+            "title": "For Africa: UM6P’s Commitment to Industry, Research, and Business Innovation",
+            "excerpt": "Discover how UM6P drives excellence through AAIT, AIRESS, ABS, and the Center for African Studies, fostering innovation and African perspectives.",
+            "link": "For-Africa.html",
+            "tags": ["Industry", "Research", "Business", "African Studies"],
+            "year": 2025,
+            "month": "January"
+            },
+        {
+        image: "images/excellence-in-africa.jpg",
+        date: "January 23, 2024",
+        author: "Azeez Hamzat",
+        authorLink: "https://www.linkedin.com/in/azeezhamzat",
+        title: "Excellence in Africa: UM6P and EPFL’s Collaborative Push for Academic Innovation",
+        excerpt: "Explore how UM6P and EPFL are advancing academic excellence in Africa through the Excellence in Africa initiative.",
+        link: "excellence-in-africa.html",
+        tags: ["Education", "Research", "Innovation"],
+        year: 2024,
+        month: "January"
+        },
+        {
+        "image": "images/um6pv.png",
+        "date": "February 16, 2025",
+        "author": "Azeez Hamzat",
+        "authorLink": "https://www.linkedin.com/in/azeezhamzat",
+        "title": "UM6P Ventures: Investing in Africa’s Future Through Science and Innovation",
+        "excerpt": "Explore how UM6P Ventures supports Digital Transformation and Deeptech startups, driving innovation in Agriculture, GreenTech, and Healthtech across Africa.",
+        "link": "um6p-ventures.html",
+        "tags": ["Innovation", "Startups", "Deeptech", "Digital Transformation"],
+        "year": 2025,
+        "month": "February"
+        }
+    ];
+
+    // Pagination variables
+    const postsPerPage = 6;
+    const recentPagesLimit = 3; // Articles in the first 3 pages are considered recent
+    const recentPostsLimit = postsPerPage * recentPagesLimit; // 6 posts/page * 3 pages = 18 posts
+    let currentPage = 1;
+    let filteredPosts = blogPosts;
+
+    // Sort blogPosts by date (newest to oldest)
+    blogPosts.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+    // Function to render blog posts (Recent Updates)
+    function renderPosts(posts, page) {
+        const start = (page - 1) * postsPerPage;
+        const end = start + postsPerPage;
+        const postsToDisplay = posts.slice(start, end);
+
+        const blogGrid = document.getElementById('blog-grid');
+        blogGrid.innerHTML = '';
+
+        postsToDisplay.forEach(post => {
+            const article = document.createElement('article');
+            article.className = 'blog-post';
+            const authorDisplay = post.authorLink ? `<a href="${post.authorLink}" target="_blank">${post.author}</a>` : post.author;
+            article.innerHTML = `
+                <img src="${post.image}" alt="${post.title}" class="blog-image">
+                <div class="blog-meta">
+                    <span><i class="fas fa-calendar-alt"></i> ${post.date}</span>
+                    <span><i class="fas fa-user"></i> ${authorDisplay}</span>
+                </div>
+                <h3>${post.title}</h3>
+                <p>${post.excerpt}</p>
+                <a href="${post.link}" class="read-more">Read More</a>
+            `;
+            blogGrid.appendChild(article);
+        });
+
+        updatePagination(posts);
+    }
+
+    // Function to update pagination controls
+    function updatePagination(posts) {
+        const totalPages = Math.ceil(posts.length / postsPerPage);
+        const paginationNumbers = document.getElementById('pagination-numbers');
+        paginationNumbers.innerHTML = '';
+
+        for (let i = 1; i <= totalPages; i++) {
+            const pageBtn = document.createElement('button');
+            pageBtn.className = `btn pagination-btn ${i === currentPage ? 'active' : ''}`;
+            pageBtn.textContent = i;
+            pageBtn.onclick = () => {
+                currentPage = i;
+                renderPosts(filteredPosts, currentPage);
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            };
+            paginationNumbers.appendChild(pageBtn);
+        }
+
+        const prevBtn = document.querySelector('.pagination-btn[onclick="changePage(\'prev\')]');
+        const nextBtn = document.querySelector('.pagination-btn[onclick="changePage(\'next\')]');
+        prevBtn.disabled = currentPage === 1;
+        nextBtn.disabled = currentPage === totalPages;
+    }
+
+    // Function to change page
+    function changePage(direction) {
+        const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+        if (direction === 'prev' && currentPage > 1) {
+            currentPage--;
+        } else if (direction === 'next' && currentPage < totalPages) {
+            currentPage++;
+        }
+        renderPosts(filteredPosts, currentPage);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Function to filter posts by search and tags
+    function filterPosts() {
+        const searchQuery = document.getElementById('search-posts').value.toLowerCase();
+        const selectedTag = document.getElementById('filter-tags').value;
+
+        filteredPosts = blogPosts.filter(post => {
+            const matchesSearch = post.title.toLowerCase().includes(searchQuery) || post.excerpt.toLowerCase().includes(searchQuery);
+            const matchesTag = selectedTag === '' || post.tags.includes(selectedTag);
+            return matchesSearch && matchesTag;
+        });
+
+        currentPage = 1; // Reset to first page after filtering
+        renderPosts(filteredPosts, currentPage);
+        renderArchive(); // Re-render archive after filtering
+    }
+
+    // Function to render archive (only posts after the first 3 pages of recent updates)
+    function renderArchive() {
+        const archiveGrid = document.getElementById('archive-grid');
+        archiveGrid.innerHTML = '';
+
+        // Filter out the first 18 posts (first 3 pages) to show only older posts in the archive
+        const archivePosts = blogPosts.slice(recentPostsLimit);
+
+        // Group archive posts by year and month
+        const postsByYearMonth = {};
+        archivePosts.forEach(post => {
+            const key = `${post.year}-${post.month}`;
+            if (!postsByYearMonth[key]) {
+                postsByYearMonth[key] = { year: post.year, month: post.month, posts: [] };
+            }
+            postsByYearMonth[key].posts.push(post);
+        });
+
+        // Sort years descending, months descending within each year
+        const sortedKeys = Object.keys(postsByYearMonth).sort((a, b) => {
+            const [yearA, monthA] = a.split('-');
+            const [yearB, monthB] = b.split('-');
+            if (yearA !== yearB) return yearB - yearA;
+            const monthOrder = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            return monthOrder.indexOf(monthB) - monthOrder.indexOf(monthA);
+        });
+
+        // Render each year/month section
+        sortedKeys.forEach(key => {
+            const { year, month, posts } = postsByYearMonth[key];
+            const details = document.createElement('details');
+            details.className = 'archive-month';
+            details.innerHTML = `
+                <summary>${month} ${year}</summary>
+                <div class="archive-month-content"></div>
+            `;
+            const content = details.querySelector('.archive-month-content');
+
+            posts.forEach((post, index) => {
+                const item = document.createElement('div');
+                item.className = `archive-item ${index % 2 === 1 ? 'alt-bg' : ''}`;
+                const authorDisplay = post.authorLink ? `<a href="${post.authorLink}" target="_blank">${post.author}</a>` : post.author;
+                item.innerHTML = `
+                    <i class="fas fa-newspaper"></i>
+                    <p><a href="${post.link}">${post.date}: ${post.title}</a> - By ${authorDisplay} - Tags: ${post.tags.join(', ')}</p>
+                `;
+                content.appendChild(item);
+            });
+
+            archiveGrid.appendChild(details);
+        });
+    }
+
+    // Initialize the page
+    document.addEventListener('DOMContentLoaded', () => {
+        renderPosts(blogPosts, currentPage);
+        renderArchive();
+    });
+
+    // Subscription form handling
+    function decodeBase64(str) {
+        return atob(str);
+    }
+
+    const encodedEmail = "YWZyaWNhLmluaXRpYXRpdmVAdW02cC5tYQ==";
+    const emailAddress = decodeBase64(encodedEmail);
+
+    document.getElementById('subscriptionForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const email = document.getElementById('subscription-email').value.trim();
+        if (!email) {
+            alert('Please enter your email address.');
+            return;
+        }
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address.');
+            return;
+        }
+        const subject = encodeURIComponent('Newsletter Subscription');
+        const body = encodeURIComponent(`Please subscribe me to the UM6P - Africa Initiative newsletter.\nEmail: ${email}`);
+        const mailtoLink = `mailto:${emailAddress}?subject=${subject}&body=${body}`;
+        window.location.href = mailtoLink;
+        alert('Your email client has been opened with a pre-filled subscription request. Please click "Send" to subscribe to the UM6P - Africa Initiative newsletter.');
+    });
+    </script>
+</body>
+</html>
