@@ -336,6 +336,18 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
+        // Floating Sidebar Animation
+    const floatingLinks = document.querySelector('.floating-links');
+    if (floatingLinks) {
+        floatingLinks.addEventListener('mouseenter', function () {
+            floatingLinks.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+        });
+
+        floatingLinks.addEventListener('mouseleave', function () {
+            floatingLinks.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+        });
+    }
+    
         // Initialize news page
         renderPosts(blogPosts, currentPage);
         // Uncomment if archive is re-enabled
@@ -397,3 +409,5 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
+
+

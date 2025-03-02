@@ -1811,6 +1811,21 @@ footer {
     font-size: 0.9rem;
 }
 
+/* Style the developer link in footer-bottom */
+.footer-bottom a {
+    color: #d7492a; /* Matches footer-section links */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-bottom a:hover,
+.footer-bottom a:focus {
+    color: #FFFFFF; /* Matches footer-section hover */
+    text-decoration: underline;
+    outline: none;
+}
+
+
 /* Responsive Design (All Pages) */
 @media (max-width: 768px) {
     nav {
@@ -2011,5 +2026,93 @@ footer {
 
     .gallery-image {
         height: 150px;
+    }
+}
+
+/* Floating Sidebar Widget (for external links) */
+.floating-links {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-color: #000000;
+    border: 2px solid #d7492a;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-links:hover {
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.floating-links-header {
+    background: linear-gradient(90deg, #d7492a, #b33f26);
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.floating-links-header i {
+    font-size: 1.2rem;
+}
+
+.floating-links-content {
+    padding: 0.5rem;
+}
+
+.floating-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.floating-link i {
+    font-size: 1.2rem;
+    color: #d7492a;
+}
+
+.floating-link:hover,
+.floating-link:focus {
+    background-color: #d7492a;
+    color: #FFFFFF;
+    transform: translateX(5px);
+}
+
+.floating-link:hover i,
+.floating-link:focus i {
+    color: #FFFFFF;
+}
+
+/* Responsive Design for Floating Sidebar */
+@media (max-width: 768px) {
+    .floating-links {
+        right: 10px;
+        top: auto;
+        bottom: 20px;
+        transform: none;
+    }
+
+    .floating-links-header {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .floating-link {
+        font-size: 0.8rem;
+        padding: 0.4rem 0.8rem;
     }
 }
