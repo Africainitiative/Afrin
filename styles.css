@@ -188,7 +188,7 @@ nav {
     font-size: 1.5rem;
 }
 
-/* Enhanced Workstreams Hero Section */
+/* Workstreams Hero Section */
 .workstreams-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.321), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg') center/cover no-repeat, #000000;
     color: #FFFFFF;
@@ -208,7 +208,7 @@ nav {
     background: linear-gradient(to right, transparent, #d7492a, transparent);
 }
 
-/* Enhanced About Hero Section */
+/* About Hero Section */
 .about-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.321), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg') center/cover no-repeat, #000000;
     color: #FFFFFF;
@@ -375,9 +375,9 @@ nav {
     display: inline;
 }
 
-/* Enhanced Impacts Hero Section */
+/* Impacts Hero Section */
 .impacts-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.321), rgba(0, 0, 0, 0.7)), url('images/impacts-hero-bg.jpg') center/cover no-repeat, #000000;
+    background: linear-gradient(rgba(0, 0, 0, 0.321), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg') center/cover no-repeat, #000000;
     color: #FFFFFF;
     padding: 2rem 2rem;
     text-align: center;
@@ -395,17 +395,18 @@ nav {
     background: linear-gradient(to right, transparent, #d7492a, transparent);
 }
 
-/* Enhanced Blog Hero Section */
+/* Blog Hero Section */
 .blog-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.321), rgba(0, 0, 0, 0.7)), url('images/blog-hero-bg.jpg') center/cover no-repeat, #000000;
+    background: linear-gradient(rgba(0, 0, 0, 0.321), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg') center/cover no-repeat, #000000;
     color: #FFFFFF;
     padding: 2rem 2rem;
     text-align: center;
+    position: relative;
 }
 
-/* Enhanced Contact Hero Section */
+/* Contact Hero Section */
 .contact-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.321), rgba(0, 0, 0, 0.7)), url('images/contact-hero-bg.jpg') center/cover no-repeat, #000000;
+    background: linear-gradient(rgba(0, 0, 0, 0.321), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg') center/cover no-repeat, #000000;
     color: #FFFFFF;
     padding: 2rem 2rem;
     text-align: center;
@@ -425,9 +426,9 @@ nav {
 
 /* Post Hero Section (Individual Blog Post) */
 .post-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.321), rgba(0, 0, 0, 0.7)), url('images/blog-hero-bg.jpg') center/cover no-repeat, #000000;
+    background: linear-gradient(rgba(0, 0, 0, 0.321), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg') center/cover no-repeat, #000000;
     color: #FFFFFF;
-    padding: 4rem 2rem;
+    padding: 2rem 2rem;
     text-align: center;
     position: relative;
 }
