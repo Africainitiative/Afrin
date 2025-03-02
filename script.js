@@ -343,7 +343,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     // Impacts Page Functionality
-    if (document.querySelector('.impacts-hero')) { // Check if on impacts.html
+    if (document.querySelector('.impacts-hero')) { // Check if on collaborators.html
         // Initialize Swiper for Collaborations Carousel
         if (typeof Swiper !== 'undefined') {
             const collaborationSwiper = new Swiper('.collaborations-carousel', {
