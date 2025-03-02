@@ -29,18 +29,64 @@ nav {
     margin: 0 auto;
 }
 
+/* Logo Styling with Hierarchy */
 .logo a {
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: #d7492a;
+    font-family: 'Montserrat', sans-serif;
     text-decoration: none;
-    letter-spacing: 1px;
-    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between UM6P and Africa Initiative */
 }
 
-.logo a:hover,
-.logo a:focus {
+.logo .um6p {
+    font-size: 2rem; /* Slightly larger for emphasis */
+    font-weight: 800; /* Extra bold for UM6P */
+    color: #d7492a;
+    letter-spacing: 1.5px;
+}
+
+.logo .separator {
+    font-size: 1.8rem;
+    color: #d7492a;
+    font-weight: 700;
+}
+
+.logo .africa-initiative {
+    font-size: 1.6rem; /* Slightly smaller */
+    font-weight: 600; /* Less bold than UM6P */
+    color: #d7492a;
+    letter-spacing: 1.5px;
+}
+
+.logo a:hover .um6p,
+.logo a:hover .separator,
+.logo a:hover .africa-initiative,
+.logo a:focus .um6p,
+.logo a:focus .separator,
+.logo a:focus .africa-initiative {
     color: #FFFFFF;
+    transition: color 0.3s ease;
+}
+
+/* Hover Effect with Underline */
+.logo a {
+    position: relative;
+}
+
+.logo a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFFFFF;
+    transition: width 0.3s ease;
+}
+
+.logo a:hover::after,
+.logo a:focus::after {
+    width: 100%;
 }
 
 .nav-links {
@@ -66,6 +112,40 @@ nav {
 .nav-links a:focus {
     color: #d7492a;
     outline: none;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 1rem 1.5rem; /* More padding for balance */
+        align-items: flex-start;
+        position: relative;
+    }
+
+    .logo a {
+        font-size: 1.4rem; /* Slightly smaller for mobile */
+    }
+
+    .logo .um6p {
+        font-size: 1.6rem;
+    }
+
+    .logo .separator {
+        font-size: 1.4rem;
+    }
+
+    .logo .africa-initiative {
+        font-size: 1.2rem;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        z-index: 1100;
+    }
 }
 
 /* Dropdown Menu Styles */
