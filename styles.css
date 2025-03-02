@@ -322,7 +322,7 @@ nav {
     border-radius: 50%;
     margin: 0 auto 1rem;
     border: 2px solid #d7492a;
-    background-color: #f0f0f0; /* Fallback color if image fails to load */
+    background-color: #f0f0f0;
     display: block;
 }
 
@@ -530,7 +530,7 @@ nav {
 }
 
 .post-content ul li::before {
-    content: '\f0da'; /* Font Awesome caret-right icon */
+    content: '\f0da';
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     color: #d7492a;
@@ -983,7 +983,7 @@ nav {
 
 .collaboration-item h3 {
     font-size: 1.5rem;
-    font-weight: 700;
+    font-weight: 7
     color: #d7492a;
     margin-bottom: 0.5rem;
 }
@@ -1226,7 +1226,7 @@ nav {
 }
 
 .blog-meta a {
-    color: #d7492a !important; /* Override default browser styles */
+    color: #d7492a !important;
     text-decoration: none !important;
     transition: color 0.3s;
 }
@@ -1234,7 +1234,7 @@ nav {
 .blog-meta a:hover,
 .blog-meta a:focus,
 .blog-meta a:visited {
-    color: #b33f26 !important; /* Ensure visited links remain consistent */
+    color: #b33f26 !important;
     text-decoration: underline !important;
     outline: none;
 }
@@ -1352,7 +1352,7 @@ nav {
 }
 
 .archive-month summary::before {
-    content: '\f0d7'; /* Font Awesome caret-down icon */
+    content: '\f0d7';
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     font-size: 1.2rem;
@@ -1400,7 +1400,7 @@ nav {
 }
 
 .archive-item a {
-    color: #d7492a !important; /* Override default browser styles */
+    color: #d7492a !important;
     text-decoration: none !important;
     transition: color 0.3s;
 }
@@ -1408,7 +1408,7 @@ nav {
 .archive-item a:hover,
 .archive-item a:focus,
 .archive-item a:visited {
-    color: #b33f26 !important; /* Ensure visited links remain consistent */
+    color: #b33f26 !important;
     text-decoration: underline !important;
     outline: none;
 }
@@ -1474,7 +1474,7 @@ nav {
 }
 
 .newsletter-month summary::before {
-    content: '\f0d7'; /* Font Awesome caret-down icon */
+    content: '\f0d7';
     font-family: 'Font Awesome 6 Free';
     font-weight: 900;
     font-size: 1.2rem;
@@ -1816,13 +1816,26 @@ footer {
         flex-direction: column;
         padding: 1rem;
         align-items: flex-start;
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 1.5rem;
+        right: 1rem;
+        z-index: 1100;
     }
 
     .nav-links {
         display: none;
         flex-direction: column;
         width: 100%;
-        text-align: center;
+        background-color: #000000;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        z-index: 1000;
     }
 
     .nav-links.active {
@@ -1831,30 +1844,28 @@ footer {
 
     .nav-links li {
         margin: 1rem 0;
+        width: 100%;
     }
 
     .dropdown-toggle i {
-        display: none; /* Hide chevron on mobile */
+        display: none;
     }
 
     .dropdown-menu {
         position: static;
-        background-color: #1a1a1a; /* Slightly lighter black for contrast */
+        background-color: #1a1a1a;
         border: none;
         box-shadow: none;
         width: 100%;
-    }
-
-    .dropdown:hover .dropdown-menu {
-        display: none; /* Prevent hover behavior on mobile */
+        display: none;
     }
 
     .dropdown.active .dropdown-menu {
-        display: block; /* Show dropdown when active on mobile */
+        display: block;
     }
 
-    .menu-toggle {
-        display: block;
+    .dropdown-menu a {
+        padding: 0.75rem;
     }
 
     .hero h1,

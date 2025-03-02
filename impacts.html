@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UM6P - Africa Initiative | Our Impact</title>
+    <title>UM6P - Africa Initiative | Our collaborators</title>
     <link rel="icon" href="images/favicon.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
                     <a href="#" class="dropdown-toggle">About <i class="fas fa-chevron-down"></i></a>
                     <ul class="dropdown-menu">
                         <li><a href="about.html">Our Story</a></li>
-                        <li><a href="impacts.html" class="active">Our Impact</a></li>
+                        <li><a href="impacts.html" class="active">Our collaborators</a></li>
                     </ul>
                 </li>
                 <li><a href="news.html">News</a></li>
@@ -39,7 +39,7 @@
     <main>
         <!-- Hero Section -->
         <section class="page-hero impacts-hero">
-            <h1>Our Impact</h1>
+            <h1>Our collaborators</h1>
             <p>Discover how UM6P - Africa Initiative is making a difference through collaborations and impactful projects.</p>
         </section>
 
@@ -49,13 +49,13 @@
             <div class="swiper collaborations-carousel">
                 <div class="swiper-wrapper">
                     <div class="swiper-slide collaboration-item">
-                        <img src="images/arua.WEBP" alt="ARUA Logo" class="collaboration-logo">
+                        <img src="images/arua.png" alt="ARUA Logo" class="collaboration-logo">
                         <h3>ARUA</h3>
                         <p>Partnering with ARUA to advance research excellence and collaboration among African universities, tackling continental challenges.</p>
                     </div>
                     
                     <div class="swiper-slide collaboration-item">
-                        <img src="images/aau.PNG" alt="AAU Logo" class="collaboration-logo">
+                        <img src="images/aau.png" alt="AAU Logo" class="collaboration-logo">
                         <h3>AAU</h3>
                         <p>Working with the Association of African Universities (AAU) to foster academic partnerships and promote higher education development across Africa.</p>
                     </div>
@@ -65,17 +65,17 @@
                         <p>We collaborate with RUFORUM to strengthen higher education and research capacity in agriculture and sustainable development across African universities.</p>
                     </div>
                     <div class="swiper-slide collaboration-item">
-                        <img src="images/ace-impact.JPG" alt="ACE IMPACT Logo" class="collaboration-logo">
+                        <img src="images/ace-impact.jpg" alt="ACE IMPACT Logo" class="collaboration-logo">
                         <h3>ACE IMPACT</h3>
                         <p>Partnering with ACE IMPACT to enhance postgraduate education and research in STEM, fostering innovation and development in Africa.</p>
                     </div>
                     <div class="swiper-slide collaboration-item alt-bg">
-                        <img src="images/ocpa.PNG" alt="OCP Africa Logo" class="collaboration-logo">
+                        <img src="images/ocpa.png" alt="OCP Africa Logo" class="collaboration-logo">
                         <h3>OCP Africa</h3>
                         <p>Working with OCP Africa to empower smallholder farmers through innovative agricultural solutions and training programs tailored to African contexts.</p>
                     </div>
                     <div class="swiper-slide collaboration-item">
-                        <img src="images/fao.SVG" alt="FAO Logo" class="collaboration-logo">
+                        <img src="images/fao.png" alt="FAO Logo" class="collaboration-logo">
                         <h3>FAO</h3>
                         <p>Collaborating with FAO to address food security and sustainable agriculture challenges, promoting resilience in African communities.</p>
                     </div>
@@ -188,56 +188,6 @@
 
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script>
-        // Initialize Swiper for Collaborations Carousel
-        const collaborationSwiper = new Swiper('.collaborations-carousel', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            pagination: {
-                el: '.collaboration-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.collaboration-next',
-                prevEl: '.collaboration-prev',
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-            },
-        });
-
-        // Initialize Swiper for Gallery Carousel
-        const gallerySwiper = new Swiper('.gallery-carousel', {
-            slidesPerView: 1,
-            spaceBetween: 20,
-            loop: true,
-            pagination: {
-                el: '.gallery-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.gallery-next',
-                prevEl: '.gallery-prev',
-            },
-            breakpoints: {
-                640: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                },
-                1024: {
-                    slidesPerView: 3,
-                    spaceBetween: 30,
-                },
-            },
-        });
-    </script>
+<script src="script.js"></script>
 </body>
 </html>
