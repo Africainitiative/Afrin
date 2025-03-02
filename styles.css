@@ -89,6 +89,7 @@ nav {
     width: 100%;
 }
 
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
@@ -104,7 +105,8 @@ nav {
     color: #FFFFFF;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    position: relative; /* For underline effect */
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover,
@@ -114,38 +116,22 @@ nav {
     outline: none;
 }
 
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        padding: 1rem 1.5rem; /* More padding for balance */
-        align-items: flex-start;
-        position: relative;
-    }
+/* Underline Effect for Nav Links */
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #FFFFFF; /* White underline */
+    transition: width 0.3s ease;
+}
 
-    .logo a {
-        font-size: 1.4rem; /* Slightly smaller for mobile */
-    }
-
-    .logo .um6p {
-        font-size: 1.6rem;
-    }
-
-    .logo .separator {
-        font-size: 1.4rem;
-    }
-
-    .logo .africa-initiative {
-        font-size: 1.2rem;
-    }
-
-    .menu-toggle {
-        display: block;
-        position: absolute;
-        top: 1.5rem;
-        right: 1rem;
-        z-index: 1100;
-    }
+.nav-links a:hover::after,
+.nav-links a:focus::after,
+.nav-links a.active::after {
+    width: 100%;
 }
 
 /* Dropdown Menu Styles */
@@ -194,6 +180,7 @@ nav {
     padding: 0.75rem 1rem;
     color: #FFFFFF;
     font-weight: 400;
+    position: relative; /* For underline effect */
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -202,6 +189,24 @@ nav {
 .dropdown-menu a.active {
     background-color: #d7492a;
     color: #FFFFFF;
+}
+
+/* Underline Effect for Dropdown Links */
+.dropdown-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: 4px; /* Adjusted to appear within padding */
+    left: 1rem;
+    width: 0;
+    height: 2px;
+    background-color: #FFFFFF; /* White underline for dropdown */
+    transition: width 0.3s ease;
+}
+
+.dropdown-menu a:hover::after,
+.dropdown-menu a:focus::after,
+.dropdown-menu a.active::after {
+    width: calc(100% - 2rem); /* Adjust for padding */
 }
 
 .menu-toggle {
@@ -1064,7 +1069,7 @@ nav {
 
 .collaboration-item h3 {
     font-size: 1.5rem;
-    font-weight: 7
+    font-weight: 700; /* Fixed syntax error */
     color: #d7492a;
     margin-bottom: 0.5rem;
 }
@@ -1905,14 +1910,29 @@ footer {
     outline: none;
 }
 
-
 /* Responsive Design (All Pages) */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
-        padding: 1rem;
+        padding: 1rem 1.5rem; /* More padding for balance */
         align-items: flex-start;
         position: relative;
+    }
+
+    .logo a {
+        font-size: 1.4rem; /* Slightly smaller for mobile */
+    }
+
+    .logo .um6p {
+        font-size: 1.6rem;
+    }
+
+    .logo .separator {
+        font-size: 1.4rem;
+    }
+
+    .logo .africa-initiative {
+        font-size: 1.2rem;
     }
 
     .menu-toggle {
@@ -1941,7 +1961,7 @@ footer {
     .nav-links li {
         margin: 1rem 0;
         width: 100%;
-        padding-left: 1.5rem; /* Add padding to create space from the left wall */
+        padding-left: 1.5rem;
     }
 
     .dropdown-toggle i {
@@ -1962,7 +1982,13 @@ footer {
     }
 
     .dropdown-menu a {
-        padding: 0.75rem 2rem; /* Adjust padding to align with main menu items */
+        padding: 0.75rem 2rem;
+    }
+
+    /* Adjust underline for mobile */
+    .nav-links a::after,
+    .dropdown-menu a::after {
+        bottom: 2px; /* Closer to text in mobile view */
     }
 
     .hero h1,
