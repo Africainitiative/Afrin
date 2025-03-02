@@ -1834,7 +1834,7 @@ footer {
         background-color: #000000;
         position: absolute;
         top: 100%;
-        left: 10;
+        left: 0;
         z-index: 1000;
     }
 
@@ -1845,6 +1845,7 @@ footer {
     .nav-links li {
         margin: 1rem 0;
         width: 100%;
+        padding-left: 1.5rem; /* Add padding to create space from the left wall */
     }
 
     .dropdown-toggle i {
@@ -1865,7 +1866,7 @@ footer {
     }
 
     .dropdown-menu a {
-        padding: 0.75rem;
+        padding: 0.75rem 2rem; /* Adjust padding to align with main menu items */
     }
 
     .hero h1,
