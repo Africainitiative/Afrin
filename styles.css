@@ -2222,3 +2222,96 @@ footer {
         padding: 0.4rem 0.8rem;
     }
 }
+
+/* Floating Social Links Widget */
+.floating-social-links {
+    position: fixed;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: #000000;
+    border: 2px solid #d7492a;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-social-links:hover {
+    transform: translateY(-50%) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.floating-social-links-header {
+    background: linear-gradient(90deg, #d7492a, #b33f26);
+    color: #FFFFFF;
+    padding: 0.5rem 1rem;
+    border-radius: 8px 8px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.floating-social-links-header i {
+    font-size: 1.2rem;
+}
+
+.floating-social-links-content {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.floating-social-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1.2rem;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+}
+
+.floating-social-link i {
+    font-size: 1.5rem;
+    color: #d7492a;
+}
+
+.floating-social-link:hover,
+.floating-social-link:focus {
+    background-color: #d7492a;
+    color: #FFFFFF;
+    transform: translateX(-5px);
+}
+
+.floating-social-link:hover i,
+.floating-social-link:focus i {
+    color: #FFFFFF;
+}
+
+/* Responsive Design for Floating Social Links */
+@media (max-width: 768px) {
+    .floating-social-links {
+        left: 10px;
+        top: auto;
+        bottom: 120px; /* Above the .floating-links widget */
+        transform: none;
+    }
+
+    .floating-social-links-header {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .floating-social-link {
+        padding: 0.4rem;
+    }
+
+    .floating-social-link i {
+        font-size: 1.2rem;
+    }
+}

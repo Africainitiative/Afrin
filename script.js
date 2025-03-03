@@ -336,18 +336,30 @@ document.addEventListener('DOMContentLoaded', function () {
             });
         }
 
-        // Floating Sidebar Animation
-    const floatingLinks = document.querySelector('.floating-links');
-    if (floatingLinks) {
-        floatingLinks.addEventListener('mouseenter', function () {
-            floatingLinks.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
-        });
+        // Floating Sidebar Animation for External Links
+        const floatingLinks = document.querySelector('.floating-links');
+        if (floatingLinks) {
+            floatingLinks.addEventListener('mouseenter', function () {
+                floatingLinks.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+            });
 
-        floatingLinks.addEventListener('mouseleave', function () {
-            floatingLinks.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
-        });
-    }
-    
+            floatingLinks.addEventListener('mouseleave', function () {
+                floatingLinks.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+            });
+        }
+
+        // Floating Social Links Animation
+        const floatingSocialLinks = document.querySelector('.floating-social-links');
+        if (floatingSocialLinks) {
+            floatingSocialLinks.addEventListener('mouseenter', function () {
+                floatingSocialLinks.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+            });
+
+            floatingSocialLinks.addEventListener('mouseleave', function () {
+                floatingSocialLinks.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+            });
+        }
+
         // Initialize news page
         renderPosts(blogPosts, currentPage);
         // Uncomment if archive is re-enabled
@@ -409,5 +421,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 });
-
-
