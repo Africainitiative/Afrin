@@ -10,6 +10,14 @@ body {
     color: #000000;
     background-color: #FFFFFF;
     line-height: 1.6;
+    width: 100%;
+    min-width: 100vw;
+}
+
+/* Ensure sections take full width on all devices */
+section {
+    width: 100%;
+    box-sizing: border-box;
 }
 
 /* Header (All Pages) */
@@ -18,6 +26,7 @@ header {
     position: sticky;
     top: 0;
     z-index: 1000;
+    width: 100%;
 }
 
 nav {
@@ -27,6 +36,7 @@ nav {
     padding: 1.5rem 2rem;
     max-width: 1300px;
     margin: 0 auto;
+    width: 100%;
 }
 
 /* Logo Styling with Hierarchy */
@@ -35,12 +45,12 @@ nav {
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 0.5rem; /* Space between UM6P and Africa Initiative */
+    gap: 0.5rem;
 }
 
 .logo .um6p {
-    font-size: 2rem; /* Slightly larger for emphasis */
-    font-weight: 800; /* Extra bold for UM6P */
+    font-size: 2rem;
+    font-weight: 800;
     color: #d7492a;
     letter-spacing: 1.5px;
 }
@@ -52,8 +62,8 @@ nav {
 }
 
 .logo .africa-initiative {
-    font-size: 1.6rem; /* Slightly smaller */
-    font-weight: 600; /* Less bold than UM6P */
+    font-size: 1.6rem;
+    font-weight: 600;
     color: #d7492a;
     letter-spacing: 1.5px;
 }
@@ -66,11 +76,6 @@ nav {
 .logo a:focus .africa-initiative {
     color: #FFFFFF;
     transition: color 0.3s ease;
-}
-
-/* Hover Effect with Underline */
-.logo a {
-    position: relative;
 }
 
 .logo a::after {
@@ -105,7 +110,7 @@ nav {
     color: #FFFFFF;
     text-decoration: none;
     font-weight: 500;
-    position: relative; /* For underline effect */
+    position: relative;
     transition: color 0.3s ease;
 }
 
@@ -116,7 +121,6 @@ nav {
     outline: none;
 }
 
-/* Underline Effect for Nav Links */
 .nav-links a::after {
     content: '';
     position: absolute;
@@ -124,7 +128,7 @@ nav {
     left: 0;
     width: 0;
     height: 2px;
-    background-color: #FFFFFF; /* White underline */
+    background-color: #FFFFFF;
     transition: width 0.3s ease;
 }
 
@@ -180,7 +184,7 @@ nav {
     padding: 0.75rem 1rem;
     color: #FFFFFF;
     font-weight: 400;
-    position: relative; /* For underline effect */
+    position: relative;
     transition: background-color 0.3s, color 0.3s;
 }
 
@@ -191,22 +195,21 @@ nav {
     color: #FFFFFF;
 }
 
-/* Underline Effect for Dropdown Links */
 .dropdown-menu a::after {
     content: '';
     position: absolute;
-    bottom: 4px; /* Adjusted to appear within padding */
+    bottom: 4px;
     left: 1rem;
     width: 0;
     height: 2px;
-    background-color: #FFFFFF; /* White underline for dropdown */
+    background-color: #FFFFFF;
     transition: width 0.3s ease;
 }
 
 .dropdown-menu a:hover::after,
 .dropdown-menu a:focus::after,
 .dropdown-menu a.active::after {
-    width: calc(100% - 2rem); /* Adjust for padding */
+    width: calc(100% - 2rem);
 }
 
 .menu-toggle {
@@ -214,6 +217,7 @@ nav {
     font-size: 1.5rem;
     color: #FFFFFF;
     cursor: pointer;
+    padding-right: 20px;
 }
 
 /* Hero Section (Homepage) */
@@ -226,6 +230,7 @@ nav {
     text-align: center;
     color: #FFFFFF;
     position: relative;
+    width: 100%;
 }
 
 .hero::after {
@@ -241,6 +246,7 @@ nav {
 
 .hero-content {
     max-width: 800px;
+    width: 90%;
 }
 
 .hero h1 {
@@ -254,13 +260,14 @@ nav {
     margin-bottom: 2rem;
 }
 
-/* Page Hero Section (Workstreams, Blog, About, Contact, Impacts, Post) - Base Style */
+/* Page Hero Section (Workstreams, Blog, About, Contact, Impacts, Post) */
 .page-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.321), rgba(0, 0, 0, 0.7)), url('images/hero-bg.jpg') center/cover no-repeat, #000000;
     color: #FFFFFF;
     padding: 2rem 2rem;
     text-align: center;
     position: relative;
+    width: 100%;
 }
 
 .page-hero h1 {
@@ -280,6 +287,7 @@ nav {
     padding: 2rem 2rem;
     text-align: center;
     position: relative;
+    width: 100%;
 }
 
 .workstreams-hero::after {
@@ -300,6 +308,7 @@ nav {
     padding: 2rem 2rem;
     text-align: center;
     position: relative;
+    width: 100%;
 }
 
 .about-hero::after {
@@ -320,6 +329,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    width: 100%;
 }
 
 .about-content::after {
@@ -354,6 +364,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    width: 100%;
 }
 
 .team-content::after {
@@ -467,6 +478,7 @@ nav {
     padding: 2rem 2rem;
     text-align: center;
     position: relative;
+    width: 100%;
 }
 
 .impacts-hero::after {
@@ -487,6 +499,7 @@ nav {
     padding: 2rem 2rem;
     text-align: center;
     position: relative;
+    width: 100%;
 }
 
 /* Contact Hero Section */
@@ -496,6 +509,7 @@ nav {
     padding: 2rem 2rem;
     text-align: center;
     position: relative;
+    width: 100%;
 }
 
 .contact-hero::after {
@@ -516,6 +530,7 @@ nav {
     padding: 2rem 2rem;
     text-align: center;
     position: relative;
+    width: 100%;
 }
 
 .post-hero::after {
@@ -550,6 +565,7 @@ nav {
     margin: 0 auto;
     background-color: #FFFFFF;
     text-align: left;
+    width: 100%;
 }
 
 .post-image {
@@ -779,6 +795,7 @@ nav {
     text-align: center;
     max-width: 800px;
     margin: 0 auto;
+    width: 100%;
 }
 
 /* Buttons (Used Across Pages) */
@@ -806,6 +823,7 @@ nav {
 .intro {
     padding: 4rem 2rem;
     text-align: center;
+    width: 100%;
 }
 
 .intro h2 {
@@ -852,6 +870,7 @@ nav {
     padding: 4rem 2rem;
     background-color: #F5F5F5;
     text-align: center;
+    width: 100%;
 }
 
 .mission-content h2 {
@@ -894,6 +913,7 @@ nav {
 .featured-work {
     padding: 4rem 2rem;
     text-align: center;
+    width: 100%;
 }
 
 .featured-work h2 {
@@ -946,6 +966,7 @@ nav {
     margin: 0 auto;
     background-color: #F5F5F5;
     position: relative;
+    width: 100%;
 }
 
 .impact-content::before {
@@ -1012,6 +1033,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    width: 100%;
 }
 
 .collaborations-content::after {
@@ -1069,7 +1091,7 @@ nav {
 
 .collaboration-item h3 {
     font-size: 1.5rem;
-    font-weight: 700; /* Fixed syntax error */
+    font-weight: 700;
     color: #d7492a;
     margin-bottom: 0.5rem;
 }
@@ -1087,6 +1109,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    width: 100%;
 }
 
 .gallery-content::after {
@@ -1162,6 +1185,7 @@ nav {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     margin: 2rem 0;
     border-radius: 10px;
+    width: 100%;
 }
 
 .workstreams-diagram h2 {
@@ -1188,6 +1212,7 @@ nav {
     padding: 4rem 2rem;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .workstream-item {
@@ -1233,6 +1258,7 @@ nav {
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .blog-content h2 {
@@ -1385,6 +1411,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    width: 100%;
 }
 
 .blog-archive::after {
@@ -1507,6 +1534,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    width: 100%;
 }
 
 .newsletters-content::after {
@@ -1628,6 +1656,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    width: 100%;
 }
 
 .newsletter-subscription::after {
@@ -1693,6 +1722,7 @@ nav {
     max-width: 1200px;
     margin: 0 auto;
     position: relative;
+    width: 100%;
 }
 
 .contact-content::after {
@@ -1764,6 +1794,7 @@ nav {
     text-align: center;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .contact-form-section h2 {
@@ -1818,6 +1849,7 @@ nav {
     color: #FFFFFF;
     text-align: center;
     position: relative;
+    width: 100%;
 }
 
 .cta::before {
@@ -1847,6 +1879,7 @@ footer {
     background-color: #000000;
     color: #FFFFFF;
     padding: 3rem 2rem;
+    width: 100%;
 }
 
 .footer-content {
@@ -1856,6 +1889,7 @@ footer {
     margin: 0 auto;
     flex-wrap: wrap;
     gap: 2rem;
+    width: 100%;
 }
 
 .footer-section h3 {
@@ -1896,31 +1930,88 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Style the developer link in footer-bottom */
 .footer-bottom a {
-    color: #d7492a; /* Matches footer-section links */
+    color: #d7492a;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .footer-bottom a:hover,
 .footer-bottom a:focus {
-    color: #FFFFFF; /* Matches footer-section hover */
+    color: #FFFFFF;
     text-decoration: underline;
     outline: none;
 }
 
 /* Responsive Design (All Pages) */
+/* Tablet Breakpoint (768px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    nav {
+        padding: 1.5rem 1rem;
+    }
+
+    .hero-content {
+        max-width: 90%;
+    }
+
+    .intro,
+    .mission-content,
+    .featured-work,
+    .impact-content,
+    .cta,
+    .workstreams-diagram,
+    .workstreams-content,
+    .about-content,
+    .team-content,
+    .collaborations-content,
+    .gallery-content,
+    .blog-content,
+    .blog-archive,
+    .newsletters-content,
+    .newsletter-subscription,
+    .contact-content,
+    .contact-form-section,
+    .post-content,
+    .post-footer {
+        padding: 3rem 1rem;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .quick-links,
+    .mission-highlights,
+    .contact-details,
+    .team-grid,
+    .collaboration-grid,
+    .gallery-grid {
+        gap: 1.5rem;
+    }
+
+    .work-grid,
+    .impact-grid,
+    .blog-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .footer-content {
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+}
+
+/* Mobile Breakpoint (Up to 768px) */
 @media (max-width: 768px) {
     nav {
         flex-direction: column;
-        padding: 1rem 1.5rem; /* More padding for balance */
+        padding: 1rem 1.5rem;
         align-items: flex-start;
         position: relative;
     }
 
     .logo a {
-        font-size: 1.4rem; /* Slightly smaller for mobile */
+        font-size: 1.4rem;
     }
 
     .logo .um6p {
@@ -1985,10 +2076,9 @@ footer {
         padding: 0.75rem 2rem;
     }
 
-    /* Adjust underline for mobile */
     .nav-links a::after,
     .dropdown-menu a::after {
-        bottom: 2px; /* Closer to text in mobile view */
+        bottom: 2px;
     }
 
     .hero h1,
@@ -2016,10 +2106,6 @@ footer {
 
     .diagram-image {
         max-height: 350px;
-    }
-
-    .workstreams-diagram {
-        padding: 2rem 1rem;
     }
 
     .workstreams-hero,
@@ -2135,94 +2221,6 @@ footer {
     }
 }
 
-/* Floating Sidebar Widget (for external links) */
-.floating-links {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    background-color: #000000;
-    border: 2px solid #d7492a;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.floating-links:hover {
-    transform: translateY(-50%) scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-}
-
-.floating-links-header {
-    background: linear-gradient(90deg, #d7492a, #b33f26);
-    color: #FFFFFF;
-    padding: 0.5rem 1rem;
-    border-radius: 8px 8px 0 0;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 1rem;
-    font-weight: 700;
-}
-
-.floating-links-header i {
-    font-size: 1.2rem;
-}
-
-.floating-links-content {
-    padding: 0.5rem;
-}
-
-.floating-link {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    color: #FFFFFF;
-    text-decoration: none;
-    font-size: 0.9rem;
-    font-weight: 500;
-    transition: background-color 0.3s, color 0.3s, transform 0.3s;
-}
-
-.floating-link i {
-    font-size: 1.2rem;
-    color: #d7492a;
-}
-
-.floating-link:hover,
-.floating-link:focus {
-    background-color: #d7492a;
-    color: #FFFFFF;
-    transform: translateX(5px);
-}
-
-.floating-link:hover i,
-.floating-link:focus i {
-    color: #FFFFFF;
-}
-
-/* Responsive Design for Floating Sidebar */
-@media (max-width: 768px) {
-    .floating-links {
-        right: 10px;
-        top: auto;
-        bottom: 20px;
-        transform: none;
-    }
-
-    .floating-links-header {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-    }
-
-    .floating-link {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
-    }
-}
-
 /* Floating Social Links Widget */
 .floating-social-links {
     position: fixed;
@@ -2316,7 +2314,6 @@ footer {
     }
 }
 
-
 /* Futures Hero Section */
 .futures-hero {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/futures-bg.jpg') center/cover no-repeat;
@@ -2327,6 +2324,7 @@ footer {
     text-align: center;
     color: #FFFFFF;
     position: relative;
+    width: 100%;
 }
 
 .futures-hero::after {
@@ -2347,6 +2345,7 @@ footer {
     margin: 0 auto;
     text-align: center;
     background-color: #F5F5F5;
+    width: 100%;
 }
 
 .futures-content h2 {
@@ -2406,7 +2405,7 @@ footer {
     transform: translateY(-5px);
 }
 
-/* Responsive Adjustments */
+/* Responsive Adjustments for Futures Section */
 @media (max-width: 768px) {
     .futures-hero {
         height: 50vh;
@@ -2428,5 +2427,24 @@ footer {
     #filters select {
         width: 100%;
         max-width: 300px;
+    }
+}
+
+/* Tablet Breakpoint (769px - 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .futures-hero {
+        height: 70vh;
+    }
+
+    .futures-content {
+        padding: 3rem 1rem;
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .trends-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
     }
 }
