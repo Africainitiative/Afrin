@@ -2227,7 +2227,7 @@ footer {
 .floating-social-links {
     position: fixed;
     top: 50%;
-    left: 20px;
+    left: 1px;
     transform: translateY(-50%);
     background-color: #000000;
     border: 2px solid #d7492a;
@@ -2296,9 +2296,9 @@ footer {
 /* Responsive Design for Floating Social Links */
 @media (max-width: 768px) {
     .floating-social-links {
-        left: 10px;
+        left: 1px;
         top: auto;
-        bottom: 120px; /* Above the .floating-links widget */
+        bottom: 80px; 
         transform: none;
     }
 
@@ -2313,5 +2313,120 @@ footer {
 
     .floating-social-link i {
         font-size: 1.2rem;
+    }
+}
+
+
+/* Futures Hero Section */
+.futures-hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/futures-bg.jpg') center/cover no-repeat;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+}
+
+.futures-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50%;
+    height: 3px;
+    background: linear-gradient(to right, transparent, #d7492a, transparent);
+}
+
+/* Foresight Content Section */
+.futures-content {
+    padding: 4rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #F5F5F5;
+}
+
+.futures-content h2 {
+    font-size: 2.5rem;
+    color: #d7492a;
+    margin-bottom: 1rem;
+}
+
+.futures-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+#filters {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+#filters select {
+    padding: 0.75rem;
+    border: 1px solid #d7492a;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #FFFFFF;
+    cursor: pointer;
+}
+
+#filters select:focus {
+    outline: 2px solid #d7492a;
+    border-color: transparent;
+}
+
+#trends-chart {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.trends-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.trends-grid .work-item {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.trends-grid .work-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .futures-hero {
+        height: 50vh;
+    }
+
+    .futures-hero h1 {
+        font-size: 2rem;
+    }
+
+    .futures-content {
+        padding: 2rem 1rem;
+    }
+
+    #filters {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #filters select {
+        width: 100%;
+        max-width: 300px;
     }
 }
