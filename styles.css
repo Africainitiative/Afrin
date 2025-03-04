@@ -1944,7 +1944,7 @@ footer {
 }
 
 /* Responsive Design (All Pages) */
-/* Tablet Breakpoint (768px - 1024px) */
+/* Tablet Breakpoint (768px - 1200px) */
 @media (min-width: 769px) and (max-width: 1024px) {
     nav {
         padding: 1.5rem 1rem;
