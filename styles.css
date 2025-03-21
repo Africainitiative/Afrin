@@ -1526,7 +1526,7 @@ nav {
     outline: none;
 }
 
-/* Newsletters Section (Moved to Blog Page) */
+/* Newsletters Section */
 .newsletters-content {
     padding: 4rem 2rem;
     background: linear-gradient(180deg, #FFFFFF, #F5F5F5);
@@ -1552,6 +1552,19 @@ nav {
     font-size: 2.5rem;
     color: #d7492a;
     margin-bottom: 2rem;
+}
+
+.newsletters-content a {
+    color: #d7492a;
+    text-decoration:underline;
+    transition: color 0.3s;
+}
+
+.newsletter-content a:hover,
+.newsletter-content a:focus {
+    color: #b33f26;
+    text-decoration: underline;
+    outline:auto;
 }
 
 .newsletter-grid {
@@ -1945,7 +1958,7 @@ footer {
 
 /* Responsive Design (All Pages) */
 /* Tablet Breakpoint (768px - 1200px) */
-@media (min-width: 1000px) and (max-width: 1200px) {
+@media (min-width: 769px) and (max-width: 1200px) {
     nav {
         padding: 1.5rem 1rem;
     }
